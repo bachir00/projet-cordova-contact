@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Contact Manager</title>
+    <script src="lib/jquery.min.js"></script>
+    <script src="lib/jquery.mobile-1.4.5.min.js"></script>
+    <link rel="stylesheet" href="lib/themes/samatheme.min.css" />
+    <link rel="stylesheet" href="lib/themes/jquery.mobile.icons.min.css" />
+    <link rel="stylesheet" href="lib/samatheme.min.css" />
+    <link rel="stylesheet" href="lib/jquery.mobile.structure-1.4.5.min.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <script src="cordova.js"></script>
+    <script src="js/index.js"></script>
+</head>
+<body>
+    <!-- Page home des contacts -->
+<div data-role="page" id="contactListPage">
+    <div data-role="header">
+        <h1>Contacts</h1>
+        <p id="contactCount"></p>
+    </div>
+    <div data-role="content">
+        <input id="searchContacts" data-type="search" placeholder="Rechercher des contacts...">
+        <ul id="contactList" data-role="listview" data-filter="true" data-input="#searchContacts" data-inset="true"></ul>
+    </div>
+    <div data-role="footer" data-position="fixed" data-tap-toggle="false">
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#addContactPage" data-role="button" id="addContact" class="ui-btn ui-corner-all ui-shadow ui-icon-plus ui-btn-icon-left">Ajouter un Contact</a></li>
+                <li><a href="#favoriteContactsPage" data-role="button" id="favoriteContactsButton" class="ui-btn ui-corner-all ui-shadow ui-icon-star ui-btn-icon-left">Favoris</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+    <!-- Page d'ajout de contact -->
+    <div data-role="page" id="addContactPage">
+        <div data-role="header">
+            <a href="#contactListPage" data-icon="back" data-iconpos="notext">Retour</a>
+            <h1>Ajouter un contact</h1>
+        </div>
+        <div data-role="content">
+            <form id="addContactForm">
+                <label for="newContactName">Nom :</label>
+                <input type="text" name="newContactName" id="newContactName" placeholder="Entrez le nom">
+                <label for="newContactPhone">Téléphone :</label>
+                <input type="tel" name="newContactPhone" id="newContactPhone" placeholder="Entrez le numéro de téléphone">
+                <label for="newContactType">Type :</label>
+                <select name="newContactType" id="newContactType">
+                    <option value="mobile">Mobile</option>
+                    <option value="home">Domicile</option>
+                    <option value="work">Travail</option>
+                </select>
+                <input type="submit" value="Ajouter le contact" class="ui-btn ui-corner-all ui-shadow ui-btn-icon-left ui-icon-check">
+            </form>
+        </div>
+    </div>
+    <!-- Page de détail du contact -->
+    <div data-role="page" id="contactDetailPage">
+        <div data-role="header">
+            <a href="#contactListPage" data-icon="back" data-iconpos="notext">Retour</a>
+            <h1>Détails du contact</h1>
+        </div>
+        <div data-role="content">
+            <img id="contactImg" src="img/contact1.png" class="contact-img-large">
+            <h2 id="contactName">Nom du contact</h2>
+            <p id="contactPhone">Numéro de téléphone</p>
+            <p id="contactType">Type de téléphone</p>
+        </div>
+        <div data-role="footer" data-position="fixed">
+            <a href="#editContactPage" data-role="button" id="editContactButton" class="ui-btn ui-corner-all ui-shadow ui-icon-edit ui-btn-icon-left">Modifier</a>
+            <a href="#" data-role="button" id="deleteContactButton" class="ui-btn ui-corner-all ui-shadow ui-icon-delete ui-btn-icon-left">Supprimer</a>
+            <a href="#" data-role="button" id="favoriteContactButton" class="ui-btn ui-corner-all ui-shadow ui-icon-star ui-btn-icon-left">Favoris</a>
+            
+        </div>
+    </div>
+
+
+    <!-- Page de modification du contact -->
+    <div data-role="page" id="editContactPage">
+        <div data-role="header">
+            <a href="#contactDetailPage" data-icon="back" data-iconpos="notext">Retour</a>
+            <h1>Modifier le contact</h1>
+        </div>
+        <div data-role="content">
+            <form id="editContactForm">
+                <label for="editContactName">Nom :</label>
+                <input type="text" name="editContactName" id="editContactName" placeholder="Entrez le nom">
+                <label for="editContactPhone">Téléphone :</label>
+                <input type="tel" name="editContactPhone" id="editContactPhone" placeholder="Entrez le numéro de téléphone">
+                <label for="editContactType">Type :</label>
+                <select name="editContactType" id="editContactType">
+                    <option value="mobile">Mobile</option>
+                    <option value="home">Domicile</option>
+                    <option value="work">Travail</option>
+                </select>
+                <input type="submit" value="Modifier le contact" class="ui-btn ui-corner-all ui-shadow ui-btn-icon-left ui-icon-check">
+            </form>
+        </div>
+    </div>
+    <!-- Page des contacts favoris -->
+    <div data-role="page" id="favoriteContactsPage">
+        <div data-role="header">
+            <a href="#contactListPage" data-icon="back" data-iconpos="notext">Retour</a>
+            <h1>Contacts Favoris</h1>
+        </div>
+        <div data-role="content">
+            <ul id="favoriteContactList" data-role="listview" data-inset="true">
+                <!-- Liste des contacts here -->
+            </ul>
+        </div>
+    </div>
+
+</body>
+</html>

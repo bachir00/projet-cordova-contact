@@ -1,0 +1,99 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+#contactListPage .ui-header {
+    background-color: #f8f8f8;
+    border-bottom: 1px solid #ccc;
+}
+
+#contactListPage h1 {
+    margin: 0.6em 0;
+    font-size: 24px;
+}
+
+#contactListPage #contactCount {
+    color: #999;
+    font-size: 14px;
+    margin-top: -10px;
+    text-align: center;
+}
+
+#contactListPage .ui-content {
+    padding: 0;
+}
+
+#searchContacts {
+    margin: 0px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    margin-right: 0px;
+}
+
+#contactList .ui-li-icon {
+    margin: 0 10px 0 0;
+}
+
+#contactList li {
+    border-bottom: 1px solid #ccc;
+}
+
+#contactList li a {
+    display: flex;
+    align-items: center;
+}
+
+#contactList li img.contact-img {
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    margin-right: 50px;
+    margin-top: 6px;
+}
+
+#contactList li h2 {
+    font-size: 16px;
+    margin: 0;
+    flex-grow: 1;
+}
+
+#contactList li p {
+    font-size: 14px;
+    color: #666;
+    margin: 0;
+}
+
+.ui-footer {
+    border-top: 1px solid #ccc;
+    display: flex; 
+    justify-content: space-around; 
+    align-items: center; 
+    padding: 10px; 
+    min-height: 50px; 
+}
+
+.ui-footer a {
+    flex: 1; 
+    margin: 10px; 
+    text-align: center; 
+}
+
+.ui-footer a.ui-btn {
+    width: auto; /* Laisser flexbox décider */
+    margin: 10px;
+}
+
+/* detail page */
+.contact-img-large {
+    border: 2px solid #ccc; 
+    border-radius: 50%; 
+    display: block;
+    margin: 0 auto; 
+    margin-top: 20px; 
+}
+
+#contactName, #contactPhone, #contactType {
+    text-align: center;
+    margin-top: 10px; 
+    margin-bottom: 10px; 
+}
