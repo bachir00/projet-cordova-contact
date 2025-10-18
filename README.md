@@ -3,7 +3,7 @@
 A simple **mobile contact management application** built with **Apache Cordova**.  
 This project was developed as part of my school coursework to demonstrate my skills in **mobile app development**, **JavaScript**, and **frontend design**.
 
----
+
 
 ## Features ✨
 
@@ -13,16 +13,6 @@ This project was developed as part of my school coursework to demonstrate my ski
 - Search and filter contacts
 - User-friendly interface optimized for mobile devices
 
----
-
-## Screenshots 📸
-
-![Screenshot1](path/to/screenshot1.png)  
-![Screenshot2](path/to/screenshot2.png)
-
-*(Replace with actual screenshots from your app)*
-
----
 
 ## Technology Stack 🛠️
 
@@ -38,16 +28,23 @@ This project was developed as part of my school coursework to demonstrate my ski
  **Install Cordova** if you don’t have it:
    ```bash
    npm install -g cordova
+```
 **Clone the repository**
+```bash
 git clone https://github.com/bachir00/cordova-contact.git
 cd cordova-contact
+```
 
 **Add plateform**
+```bash
 cordova platform add android
 cordova platform add ios
+```
 
 **Run Application**
+```bash
 cordova run android
 cordova run ios
+```
 
 
